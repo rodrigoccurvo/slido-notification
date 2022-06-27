@@ -88,7 +88,7 @@ var callback = function (mutationList, observer) {
 
 var temporaryCallback = function (mutationList, observer) {
     // console.log(mutationList)
-    var target = document.querySelector('div.questions-main-panel:nth-of-type(2)');
+    var target = document.querySelector('div.questions-main-panel:last-of-type');
     if (target) {
         askNotificationPermission();
 
