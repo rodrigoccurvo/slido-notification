@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Slido Notification",
+  "version": "0.1.0",
+  "description": "Notifies when a new question is posted on Sli.do",
+
+  "content_scripts": [{
+    "matches": ["https://admin.sli.do/*"],
+    "js": ["content.js"],
+    "run_at" : "document_start"
+  },{
+    "matches": ["https://admin.sli.do/*"],
+    "js": ["observe.js"],
+    "run_at" : "document_idle"
+  }],
+
+  "web_accessible_resources": [{
+    "matches": ["https://admin.sli.do/*"],
+    "resources": ["notification.mp3", "question.png"]
+  }],
+
+  "host_permissions":["https://admin.sli.do/*"]
+}
