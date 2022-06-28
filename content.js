@@ -43,8 +43,7 @@ function showNotification(title, text) {
         {
             body: text,
             icon: notificationIcon,
-            requireInteraction: true,
-            image: notificationIcon,
+            requireInteraction: true
         });
     notification.onclick = function (e) { window.focus(); this.close(); }
     // TODO: call from extension to be able to do it without the user
